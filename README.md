@@ -21,18 +21,18 @@ Backend / Database: Firebase.
 Styling: CSS.
 Deployment: Ready for modern web hosting.
 
-<img width="1000" height="1200" alt="home-page" src="https://github.com/user-attachments/assets/1ebc69d0-5594-49cf-b36f-fa41a2b9084c" />
+<img width="800" height="1200" alt="home-page" src="https://github.com/user-attachments/assets/1ebc69d0-5594-49cf-b36f-fa41a2b9084c" />
 
 
-<img width="800" height="900" alt="timeline" src="https://github.com/user-attachments/assets/4cbc6422-2549-4b1d-93bc-f5cdefe43b46" />
+<img width="800" height="1200" alt="timeline" src="https://github.com/user-attachments/assets/4cbc6422-2549-4b1d-93bc-f5cdefe43b46" />
 
-<img width="800" height="900" alt="add-wishes" src="https://github.com/user-attachments/assets/6de3cf5f-e078-4813-89b6-7f2ee8e02585" />
+<img width="800" height="1200" alt="add-wishes" src="https://github.com/user-attachments/assets/6de3cf5f-e078-4813-89b6-7f2ee8e02585" />
 
-<img width="800" height="900" alt="add-love" src="https://github.com/user-attachments/assets/c301338a-1923-429b-a2c3-36b1c8cab29d" />
+<img width="800" height="1200" alt="add-love" src="https://github.com/user-attachments/assets/c301338a-1923-429b-a2c3-36b1c8cab29d" />
 
-<img width="800" height="900" alt="image" src="https://github.com/user-attachments/assets/53083977-1f40-4368-b282-4eadba6c7cab" />
+<img width="800" height="1200" alt="image" src="https://github.com/user-attachments/assets/53083977-1f40-4368-b282-4eadba6c7cab" />
 
-<img width="800" height="900" alt="image" src="https://github.com/user-attachments/assets/b5ecd0d5-1626-434f-94e1-c98feab07274" />
+<img width="800" height="1200" alt="image" src="https://github.com/user-attachments/assets/b5ecd0d5-1626-434f-94e1-c98feab07274" />
 
 ## Getting Started
 Prerequisites
