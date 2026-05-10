@@ -30,7 +30,7 @@ Deployment: Ready for modern web hosting.
 
 <img width="1100" height="1200" alt="add-love" src="https://github.com/user-attachments/assets/c301338a-1923-429b-a2c3-36b1c8cab29d" />
 
-<img width="800" height="1200" alt="image" src="https://github.com/user-attachments/assets/53083977-1f40-4368-b282-4eadba6c7cab" />
+<img width="1100" height="1200" alt="image" src="https://github.com/user-attachments/assets/53083977-1f40-4368-b282-4eadba6c7cab" />
 
 <img width="1100" height="1200" alt="image" src="https://github.com/user-attachments/assets/b5ecd0d5-1626-434f-94e1-c98feab07274" />
 
