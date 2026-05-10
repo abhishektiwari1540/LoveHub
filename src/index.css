@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-romantic-bg: #0F0D0D;
+  --color-romantic-rose: var(--accent-color, #FB7185);
+  --color-romantic-gold: var(--secondary-accent-color, #EAB308);
+  --color-romantic-text: #F5F5F4;
+  --color-romantic-border: rgba(255, 255, 255, 0.1);
+  --color-romantic-glass: rgba(255, 255, 255, 0.03);
+}
+
+@layer base {
+  body {
+    @apply bg-romantic-bg text-romantic-text font-sans transition-colors duration-1000;
+    --accent-color: #FB7185;
+    --secondary-accent-color: #EAB308;
+    --glow-color: rgba(251,113,113,0.15);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-romantic-glass backdrop-blur-md border border-romantic-border rounded-[2.5rem] shadow-2xl;
+}
+
+.midnight-gradient {
+  --accent-color: #FB7185;
+  --secondary-accent-color: #EAB308;
+  --glow-color: rgba(251,113,113,0.2);
+  background: radial-gradient(circle at 50% 50%, #1A0B0B 0%, #0F0D0D 100%);
+}
+
+.evergreen-gradient {
+  --accent-color: #C7FFB2;
+  --secondary-accent-color: #FFF5DC;
+  --glow-color: rgba(199,255,178,0.15);
+  background: radial-gradient(circle at 50% 50%, #0B1A0B 0%, #050A05 100%);
+}
+
+.celestial-gradient {
+  --accent-color: #A5B4FC;
+  --secondary-accent-color: #E0E7FF;
+  --glow-color: rgba(165,180,252,0.15);
+  background: radial-gradient(circle at 50% 50%, #0A0A25 0%, #050510 100%);
+}
+
+.golden-gradient {
+  --accent-color: #FDE68A;
+  --secondary-accent-color: #FDBA74;
+  --glow-color: rgba(253,230,138,0.15);
+  background: radial-gradient(circle at 50% 50%, #2A1B0A 0%, #1A0F05 100%);
+}
+
+.deepsea-gradient {
+  --accent-color: #2DD4BF;
+  --secondary-accent-color: #99F6E4;
+  --glow-color: rgba(45,212,191,0.15);
+  background: radial-gradient(circle at 50% 50%, #051A2E 0%, #020D1A 100%);
+}
+
+.hover-glow {
+  @apply hover:shadow-[0_0_20px_var(--glow-color)] transition-all duration-500;
+}

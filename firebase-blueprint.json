@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "Couple": {
+      "title": "Couple Sanctuary",
+      "description": "A shared sanctuary between two partners.",
+      "type": "object",
+      "properties": {
+        "partner1": { "type": "object" },
+        "partner2": { "type": "object" },
+        "startDate": { "type": "string" },
+        "firstMeetingDate": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "Memory": {
+      "title": "Relationship Memory",
+      "description": "A shared memory with a photo, story, and date.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Letter": {
+      "title": "Love Letter",
+      "description": "A letter that unlocks on a specific date.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "unlockDate": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "couples": {
+      "schema": "Couple",
+      "description": "The main couple document"
+    },
+    "couples/{coupleId}/memories": {
+      "schema": "Memory",
+      "description": "Memories specific to a couple"
+    },
+    "couples/{coupleId}/letters": {
+      "schema": "Letter",
+      "description": "Letters specific to a couple"
+    }
+  }
+}

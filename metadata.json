@@ -1,0 +1,8 @@
+{
+  "name": "Soulbound - Our Digital Sanctuary",
+  "description": "A private, romantic space for long-distance partners to share memories, countdown to their first meeting, and unlock love letters.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

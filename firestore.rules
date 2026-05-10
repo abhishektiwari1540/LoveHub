@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isMember(coupleId) {
+      return isSignedIn() && exists(/databases/$(database)/documents/couples/$(coupleId)) && (
+        get(/databases/$(database)/documents/couples/$(coupleId)).data.partner1.uid == request.auth.uid ||
+        (get(/databases/$(database)/documents/couples/$(coupleId)).data.partner2 != null && 
+         get(/databases/$(database)/documents/couples/$(coupleId)).data.partner2.uid == request.auth.uid)
+      );
+    }
+
+    match /couples/{coupleId} {
+      // Allow 'get' for anyone signed in so they can join by code
+      // 'list' is still effectively denied because there's no allow list rule
+      allow get: if isSignedIn();
+      
+      allow create: if isSignedIn() && 
+        request.resource.data.partner1.uid == request.auth.uid;
+
+      allow update: if isSignedIn() && (
+        // Partner 1 or Partner 2 can update their own sanctuary
+        (resource.data.partner1.uid == request.auth.uid || 
+         (resource.data.partner2 != null && resource.data.partner2.uid == request.auth.uid)) ||
+        // Allow joining: can only update if partner2 is missing and setting self as partner2
+        (resource.data.status == 'pairing' && 
+         !('partner2' in resource.data) && 
+         request.resource.data.partner2.uid == request.auth.uid &&
+         request.resource.data.status == 'active')
+      );
+    }
+
+    match /couples/{coupleId}/memories/{memoryId} {
+      allow read, write: if isMember(coupleId);
+    }
+
+    match /couples/{coupleId}/letters/{letterId} {
+      allow read, write: if isMember(coupleId);
+    }
+
+    match /couples/{coupleId}/bucketList/{itemId} {
+      allow read, write: if isMember(coupleId);
+    }
+
+    match /couples/{coupleId}/voiceNotes/{noteId} {
+      allow read, write: if isMember(coupleId);
+    }
+  }
+}
