@@ -1,10 +1,10 @@
 {
   "projectId": "gen-lang-client-0242426515",
-  "appId": "1:73878830046:web:5a13bfb9f14f1265cd3b4f",
-  "apiKey": "AIzaSyBOMIJ8MbwtKjyW2KsQY5srIjr6BZ5Avqs",
-  "authDomain": "gen-lang-client-0242426515.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-52c8a4af-d5d9-4522-93e3-688efd0a21e2",
-  "storageBucket": "gen-lang-client-0242426515.firebasestorage.app",
+  "appId": "app_key",
+  "apiKey": "your_key",
+  "authDomain": "domain",
+  "firestoreDatabaseId": "stroage",
+  "storageBucket": "",
   "messagingSenderId": "73878830046",
   "measurementId": ""
 }
